@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quote | GilroyGarden</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>GilroyGarden</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="quote.html" class="cta">Get a Quote</a>
+    </nav>
+  </header>
+
+  <section class="quote">
+    <h2>Request a Quote</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="services">Which services are you interested in?</label>
+      <select id="services" name="services" multiple>
+        <option>Garden creation</option>
+        <option>Garden improvement</option>
+        <option>Maintenance</option>
+        <option>Ponds</option>
+        <option>Masonry</option>
+        <option>Compost</option>
+        <option>Botanical objects</option>
+      </select>
+
+      <label for="details">Additional details:</label>
+      <textarea id="details" name="details"></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© GilroyGarden 2025</p>
+  </footer>
+</body>
+</html>

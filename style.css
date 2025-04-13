@@ -1,6 +1,4 @@
-/* style.css */
-
-/* Reset básico */
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
@@ -48,12 +46,12 @@ nav .cta {
 }
 
 .hero {
-  background-image: url('jardin-fondo.jpg');
+  background-image: url('garden-background.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
   padding: 4rem 2rem;
-  color: #000;
+  color: #fff;
 }
 
 .hero h2 {
@@ -61,31 +59,31 @@ nav .cta {
   margin-bottom: 1rem;
 }
 
-.servicios, .catalogo, .galeria, .acerca, .contacto, .cotizar {
+.services, .catalog, .gallery, .about, .contact, .quote {
   padding: 2rem;
   max-width: 900px;
   margin: auto;
 }
 
-.servicios h3, .catalogo h3, .acerca h3, .cotizar h2, .contacto h2, .galeria h2 {
+.services h3, .catalog h3, .about h3, .quote h2, .contact h2, .gallery h2 {
   color: #3e5e4c;
   font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 
-.servicios ul {
+.services ul {
   list-style: disc;
   padding-left: 2rem;
   color: #3b463e;
 }
 
-.catalogo .objetos {
+.catalog .items {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-.catalogo article {
+.catalog article {
   background: #e4f0e7;
   padding: 1rem;
   border-radius: 10px;
@@ -94,13 +92,13 @@ nav .cta {
   text-align: center;
 }
 
-.galeria .imagenes {
+.gallery .images {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-.galeria img {
+.gallery img {
   width: 100%;
   max-width: 280px;
   border-radius: 10px;
@@ -142,17 +140,4 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-  .catalogo .objetos, .galeria .imagenes {
-    flex-direction: column;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
 }

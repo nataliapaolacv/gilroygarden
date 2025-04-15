@@ -1,143 +1,155 @@
 /* Basic Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  background-color: #f3f8f4;
-  color: #2d3a32;
-  line-height: 1.6;
+    background-color: #f3f8f4;
+    color: #2d3a32;
+    line-height: 1.6;
 }
 
 header {
-  background-color: #a8cbb7;
-  color: #fff;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #a8cbb7;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  font-size: 1.8rem;
-  letter-spacing: 1px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
 }
 
 nav a {
-  color: #fff;
-  margin-left: 1rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: opacity 0.3s;
+    color: #fff;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
 }
 
 nav a:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 nav .cta {
-  background-color: #4e7f61;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
+    background-color: #4e7f61;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
 }
 
 .hero {
-  background-image: url('garden-background.jpg');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  padding: 4rem 2rem;
-  color: #fff;
+    background-image: url("garden-background.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #000;
 }
 
 .hero h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-.services, .catalog, .gallery, .about, .contact, .quote {
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
+.services,
+.catalog,
+.gallery,
+.about,
+.contact,
+.quote {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
 }
 
-.services h3, .catalog h3, .about h3, .quote h2, .contact h2, .gallery h2 {
-  color: #3e5e4c;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
+.services h3,
+.catalog h3,
+.about h3,
+.quote h2,
+.contact h2,
+.gallery h2 {
+    color: #3e5e4c;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
 }
 
 .services ul {
-  list-style: disc;
-  padding-left: 2rem;
-  color: #3b463e;
+    list-style: disc;
+    padding-left: 2rem;
+    color: #3b463e;
 }
 
 .catalog .items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .catalog article {
-  background: #e4f0e7;
-  padding: 1rem;
-  border-radius: 10px;
-  flex: 1 1 calc(33% - 1rem);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-align: center;
+    background: #e4f0e7;
+    padding: 1rem;
+    border-radius: 10px;
+    flex: 1 1 calc(33% - 1rem);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .gallery .images {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .gallery img {
-  width: 100%;
-  max-width: 280px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 form {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
-form input, form textarea, form select {
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
+form input,
+form textarea,
+form select {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
 }
 
 form button {
-  background-color: #4e7f61;
-  color: #fff;
-  padding: 0.6rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
+    background-color: #4e7f61;
+    color: #fff;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
 form button:hover {
-  background-color: #3a664f;
+    background-color: #3a664f;
 }
 
 footer {
-  background-color: #a8cbb7;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+    background-color: #a8cbb7;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
 }

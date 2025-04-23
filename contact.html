@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Contact | GilroyGarden</title>
+        <title>GilroyGarden | Contact</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
@@ -11,14 +11,14 @@
             <h1>GilroyGarden</h1>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
+                <!-- <a href="projects.html">Projects</a> -->
                 <a href="contact.html">Contact</a>
                 <a href="quote.html" class="cta">Get a Quote</a>
             </nav>
         </header>
 
         <section class="contact">
-            <h2>Contact</h2>
+            <h2>Send us a Message</h2>
             <!-- <p>Email: contact@gilroygarden.com</p> -->
             <!-- <p>Phone: <a href="tel:+14083128459">+1 (408) 312-8459</a></p> -->
             <p>
@@ -28,19 +28,54 @@
                 </a>
             </p>
 
-            <form>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <!-- Replace with your Access Key -->
+                <input
+                    type="hidden"
+                    name="access_key"
+                    value="d81fbb7e-2a4c-4d46-aa1b-1d74e6746e77"
+                />
+                <input
+                    type="hidden"
+                    name="redirect"
+                    value="https://gilroygarden.ecosys.eu/thanks.html
+"
+                />
+
+                <input
+                    type="hidden"
+                    name="subject"
+                    value="Gilroy Garden - Contact Message"
+                />
+                <!-- Form Inputs. Each input must have a name="" attribute -->
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
-
+                <input type="text" name="name" required />
+                <label for="email">Email:</label>
+                <input type="email" name="email" required />
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5"></textarea>
+                <textarea name="message" required></textarea>
 
-                <button type="submit">Send</button>
+                <!-- Honeypot Spam Protection -->
+                <input
+                    type="checkbox"
+                    name="botcheck"
+                    class="hidden"
+                    style="display: none"
+                />
+
+                <!-- Custom Confirmation / Success Page -->
+                <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+                <button type="submit">Send Message</button>
             </form>
         </section>
 
         <footer>
-            <p>© GilroyGarden 2025</p>
+            &copy;
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+            GilroyGarden. All Rights Reserved.
         </footer>
     </body>
 </html>

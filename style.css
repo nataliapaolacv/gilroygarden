@@ -18,6 +18,11 @@ body {
     background-color: #f3f8f4;
     color: #2d3a32;
     line-height: 1.6;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -75,7 +80,8 @@ nav .cta {
 .gallery,
 .about,
 .contact,
-.quote {
+.quote,
+.thanks {
     padding: 2rem;
     max-width: 1200px;
     margin: auto;
@@ -86,7 +92,8 @@ nav .cta {
 .about h3,
 .quote h2,
 .contact h2,
-.gallery h2 {
+.gallery h2,
+.thanks h2 {
     color: #3e5e4c;
     font-size: 1.6rem;
     margin-bottom: 1rem;
@@ -218,4 +225,8 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
 }

@@ -19,8 +19,13 @@
 
         <section class="contact">
             <h2>Send us a Message</h2>
-            <!-- <p>Email: contact@gilroygarden.com</p> -->
-            <!-- <p>Phone: <a href="tel:+14083128459">+1 (408) 312-8459</a></p> -->
+            <p>
+                Email:
+                <a href="mailto:contact@gilroygarden.com"
+                    >contact@gilroygarden.com</a
+                >
+            </p>
+            <p>Phone: <a href="tel:+14083128459">+1 (408) 312-8459</a></p>
             <p>
                 Instagram:
                 <a href="https://www.instagram.com/jardinfilolia">
@@ -28,7 +33,11 @@
                 </a>
             </p>
 
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                id="contact-form"
+            >
                 <!-- Replace with your Access Key -->
                 <input
                     type="hidden"
@@ -47,23 +56,41 @@
                     value="Gilroy Garden - Contact Message"
                 />
                 <!-- Form Inputs. Each input must have a name="" attribute -->
-                <label for="name">Name:</label>
-                <input type="text" name="name" required />
-                <label for="email">Email:</label>
-                <input type="email" name="email" required />
+                <div class="form-vertical">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" required />
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" required />
+                </div>
                 <label for="message">Message:</label>
-                <textarea name="message" required></textarea>
+                <textarea
+                    name="message"
+                    style="min-height: 200px"
+                    required
+                ></textarea>
 
-                <!-- Honeypot Spam Protection -->
-                <input
-                    type="checkbox"
-                    name="botcheck"
-                    class="hidden"
-                    style="display: none"
-                />
+                <!-- hCaptcha Spam Protection -->
+                <div class="h-captcha" data-captcha="true"></div>
+                <script
+                    src="https://web3forms.com/client/script.js"
+                    async
+                    defer
+                ></script>
+                <script>
+                    const form = document.getElementById("contact-form");
 
-                <!-- Custom Confirmation / Success Page -->
-                <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                    form.addEventListener("submit", function (e) {
+                        const hCaptcha = form.querySelector(
+                            "textarea[name=h-captcha-response]",
+                        ).value;
+
+                        if (!hCaptcha) {
+                            e.preventDefault();
+                            alert("Please fill out captcha field");
+                            return;
+                        }
+                    });
+                </script>
 
                 <button type="submit">Send Message</button>
             </form>

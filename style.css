@@ -87,6 +87,25 @@ nav .cta {
     margin: auto;
 }
 
+.contact {
+    min-width: 900px;
+}
+
+.form-vertical {
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-vertical input {
+    flex: 1;
+}
+
+label {
+    cursor: pointer;
+}
 .services h3,
 .catalog h3,
 .about h3,

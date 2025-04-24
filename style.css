@@ -91,21 +91,41 @@ nav .cta {
     min-width: 900px;
 }
 
-.form-vertical {
+.form-horizontal {
     display: flex;
     flex-direction: row;
     vertical-align: center;
     align-items: center;
     gap: 10px;
+    margin-top: 30px;
 }
 
-.form-vertical input {
+.form-horizontal input {
     flex: 1;
 }
 
-label {
-    cursor: pointer;
+.form-vertical {
+    display: flex;
+    flex-direction: column;
+    horizontal-align: center;
+    align-items: left;
+    gap: 10px;
+    margin-top: 30px;
 }
+
+.form-vertical div {
+    flex: 1;
+}
+
+.form-vertical div label {
+    font-size: 1.5rem;
+}
+
+button[type="submit"],
+.h-captcha {
+    margin-top: 30px;
+}
+
 .services h3,
 .catalog h3,
 .about h3,

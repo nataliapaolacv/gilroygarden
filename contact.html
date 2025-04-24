@@ -56,18 +56,21 @@
                     value="Gilroy Garden - Contact Message"
                 />
                 <!-- Form Inputs. Each input must have a name="" attribute -->
-                <div class="form-vertical">
+                <div class="form-horizontal">
                     <label for="name">Name:</label>
                     <input type="text" name="name" required />
                     <label for="email">Email:</label>
                     <input type="email" name="email" required />
                 </div>
-                <label for="message">Message:</label>
-                <textarea
-                    name="message"
-                    style="min-height: 200px"
-                    required
-                ></textarea>
+
+                <div class="form-vertical">
+                    <label for="message">Message:</label>
+                    <textarea
+                        name="message"
+                        style="min-height: 200px"
+                        required
+                    ></textarea>
+                </div>
 
                 <!-- hCaptcha Spam Protection -->
                 <div class="h-captcha" data-captcha="true"></div>

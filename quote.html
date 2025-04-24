@@ -43,78 +43,99 @@
                     value="Gilroy Garden - Quote Request"
                 />
                 <!-- Form Inputs. Each input must have a name="" attribute -->
-                <div class="form-vertical">
+                <div class="form-horizontal">
                     <label for="name">Name:</label>
                     <input type="text" name="name" required />
                     <label for="email">Email:</label>
                     <input type="email" name="email" required />
                 </div>
 
-                <div>
-                    <input type="checkbox" id="garden-design" name="services" />
-                    <label for="garden-design"
-                        >Garden design and creation</label
-                    >
+                <div class="form-vertical">
+                    <label>What services are you interested in?</label>
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="garden-design"
+                            name="services"
+                        />
+                        <label for="garden-design"
+                            >Garden design and creation</label
+                        >
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="ponds" name="services" />
+                        <label for="ponds">Ponds and fountains</label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="infrastructure"
+                            name="services"
+                        />
+                        <label for="infrastructure"
+                            >Garden infrastructure</label
+                        >
+                    </div>
+
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="irrigation"
+                            name="services"
+                        />
+                        <label for="irrigation">Irrigation systems</label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="green-walls"
+                            name="services"
+                        />
+                        <label for="green-walls"
+                            >Green walls and meditation corners</label
+                        >
+                    </div>
+
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="transformation"
+                            name="services"
+                        />
+                        <label for="transformation">Space transformation</label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="urban-farming"
+                            name="services"
+                        />
+                        <label for="urban-farming">Urban farming</label>
+                    </div>
                 </div>
 
-                <div>
-                    <input type="checkbox" id="ponds" name="services" />
-                    <label for="ponds">Ponds and fountains</label>
+                <div class="form-vertical">
+                    <label for="message">Additional Information:</label>
+                    <textarea
+                        name="message"
+                        style="min-height: 200px"
+                        required
+                    ></textarea>
                 </div>
-
-                <div>
-                    <input
-                        type="checkbox"
-                        id="infrastructure"
-                        name="services"
-                    />
-                    <label for="infrastructure">Garden infrastructure</label>
-                </div>
-
-                <div>
-                    <input type="checkbox" id="irrigation" name="services" />
-                    <label for="irrigation">Irrigation systems</label>
-                </div>
-
-                <div>
-                    <input type="checkbox" id="green-walls" name="services" />
-                    <label for="green-walls"
-                        >Green walls and meditation corners</label
-                    >
-                </div>
-
-                <div>
-                    <input
-                        type="checkbox"
-                        id="transformation"
-                        name="services"
-                    />
-                    <label for="transformation">Space transformation</label>
-                </div>
-
-                <div>
-                    <input type="checkbox" id="urban-farming" name="services" />
-                    <label for="urban-farming">Urban farming</label>
-                </div>
-                <label for="message">Additional Information:</label>
-                <textarea
-                    name="message"
-                    style="min-height: 200px"
-                    required
-                ></textarea>
 
                 <!-- hCaptcha Spam Protection -->
                 <div class="h-captcha" data-captcha="true"></div>
+
                 <script
                     src="https://web3forms.com/client/script.js"
                     async
                     defer
                 ></script>
-                <script
-                    src="https://web3forms.com/client/script.js"
-                    async
-                    defer
-                ></script>
+
                 <script>
                     const form = document.getElementById("quote-form");
 
@@ -130,7 +151,9 @@
                         }
                     });
                 </script>
-                <button type="submit">Send Message</button>
+                <div class="form-vertical">
+                    <button type="submit">Send Message</button>
+                </div>
             </form>
         </section>
 

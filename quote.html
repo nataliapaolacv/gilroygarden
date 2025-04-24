@@ -20,7 +20,11 @@
         <section class="contact">
             <h2>Request a Quote</h2>
 
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                id="quote-form"
+            >
                 <!-- Replace with your Access Key -->
                 <input
                     type="hidden"
@@ -106,6 +110,26 @@
                     async
                     defer
                 ></script>
+                <script
+                    src="https://web3forms.com/client/script.js"
+                    async
+                    defer
+                ></script>
+                <script>
+                    const form = document.getElementById("quote-form");
+
+                    form.addEventListener("submit", function (e) {
+                        const hCaptcha = form.querySelector(
+                            "textarea[name=h-captcha-response]",
+                        ).value;
+
+                        if (!hCaptcha) {
+                            e.preventDefault();
+                            alert("Please fill out captcha field");
+                            return;
+                        }
+                    });
+                </script>
                 <button type="submit">Send Message</button>
             </form>
         </section>

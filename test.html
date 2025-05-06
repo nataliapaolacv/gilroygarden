@@ -185,8 +185,10 @@
                     <button class="close" onclick="closeGallery()">X</button>
                 </div>
                 <div class="gallery-info" id="galleryInfo">
-                    <div class="gallery-text"></div>
-                    <a href="quote.html" class="cta">Get a Quote</a>
+                    <div class="gallery-text" id="galleryText"></div>
+                    <div class="gallery-quote">
+                        <a href="quote.html" class="cta">Get a Quote</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -215,10 +217,6 @@
                         src: "images/plant-arrangement.jpg",
                         alt: "Garden Design 3",
                     },
-                    {
-                        src: "images/natalia-gardening.jpeg",
-                        alt: "Irrigation 2",
-                    },
                 ],
                 pond: [
                     {
@@ -236,11 +234,11 @@
                         alt: "Infrastructure 1",
                     },
                     {
-                        src: "images/iron-bars-fence.jpg",
+                        src: "https://via.placeholder.com/600x400?text=Path+2",
                         alt: "Infrastructure 2",
                     },
                     {
-                        src: "images/tall-fence-with-door.jpg",
+                        src: "https://via.placeholder.com/600x400?text=Path+3",
                         alt: "Infrastructure 3",
                     },
                 ],
@@ -250,16 +248,12 @@
                         alt: "Irrigation 1",
                     },
                     {
-                        src: "images/installation-cement-path.jpg",
+                        src: "https://via.placeholder.com/600x400?text=Irrigation+2",
                         alt: "Irrigation 2",
                     },
                     {
-                        src: "images/irrigation-system-install.jpg",
+                        src: "https://via.placeholder.com/600x400?text=Irrigation+3",
                         alt: "Irrigation 3",
-                    },
-                    {
-                        src: "images/digging-dirt.jpg",
-                        alt: "Irrigation 4",
                     },
                 ],
                 "green-walls": [
@@ -268,8 +262,12 @@
                         alt: "Green Wall 1",
                     },
                     {
-                        src: "images/vines.png",
+                        src: "https://via.placeholder.com/600x400?text=Green+Wall+2",
                         alt: "Green Wall 2",
+                    },
+                    {
+                        src: "https://via.placeholder.com/600x400?text=Green+Wall+3",
+                        alt: "Green Wall 3",
                     },
                 ],
                 transformation: [
@@ -278,16 +276,12 @@
                         alt: "Transformation 1",
                     },
                     {
-                        src: "images/grass-lawn-installation.jpg",
+                        src: "https://via.placeholder.com/600x400?text=Oasis+2",
                         alt: "Transformation 2",
                     },
                     {
-                        src: "images/grass-lawn-curved-section.jpg",
+                        src: "https://via.placeholder.com/600x400?text=Oasis+3",
                         alt: "Transformation 3",
-                    },
-                    {
-                        src: "images/figures-garden.jpg",
-                        alt: "Transformation 4",
                     },
                 ],
                 "urban-farming": [
@@ -296,8 +290,12 @@
                         alt: "Urban Farming 1",
                     },
                     {
-                        src: "images/vegetarium-installation.jpg",
+                        src: "https://via.placeholder.com/600x400?text=Farm+2",
                         alt: "Urban Farming 2",
+                    },
+                    {
+                        src: "https://via.placeholder.com/600x400?text=Farm+3",
+                        alt: "Urban Farming 3",
                     },
                 ],
             };
@@ -314,7 +312,6 @@
                         <li>Collaborative design process with your moodboard and ideas</li>
                     </ul>
                     <p>Tell us what inspires you, and we’ll create a unique garden that’s your own universe.</p>
-
                 `,
                 pond: `
                     <h2>Ponds and Fountains</h2>
@@ -399,9 +396,8 @@
                     currentIndex = 0;
                     document.getElementById("galleryModal").style.display =
                         "flex";
-                    document.getElementById("galleryInfo").innerHTML =
-                        infoContent[type] +
-                        "<a href='quote.html' class='cta'>Get a Quote</a>";
+                    document.getElementById("galleryText").innerHTML =
+                        infoContent[type];
                     document.body.style.overflow = "hidden"; // Prevent background scrolling
                     updateImage();
                 }

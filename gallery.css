@@ -1,0 +1,206 @@
+/* Gallery Thumbnails */
+.gallery-thumbs {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.gallery-thumbs img {
+    max-width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-thumbs img:hover {
+    transform: scale(1.05);
+}
+
+/* Gallery Modal */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 58, 50, 0.8); /* Matches #2d3a32 with opacity */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.gallery-content {
+    display: flex;
+    max-width: 90%;
+    max-height: 80%;
+    background-color: #e4f0e7; /* Matches grid-item background */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+    flex: 2;
+    position: relative;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.gallery-info {
+    flex: 1;
+    padding: 2rem;
+    background-color: #f3f8f4; /* Matches body background */
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: "Georgia", serif;
+    color: #2d3a32;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Allows absolute positioning of child elements */
+}
+
+.gallery-info .cta {
+    align-self: flex-end; /* Aligns button to the right */
+    position: sticky;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 0px;
+    top:50px
+    color: #fff;
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+.gallery-info .cta:hover {
+    background-color: #408050; /* Matches global .cta hover */
+    padding: 0.6rem 1rem;
+}
+
+.gallery-info h2 {
+    color: #3e5e4c; /* Matches section headings */
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: "Caramella", serif;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(78, 127, 97, 0.7); /* Matches #4e7f61 */
+    color: #fff;
+    border: none;
+    padding: 0.6rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #3a664f; /* Matches button hover */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #4e7f61; /* Matches button color */
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-family: "Georgia", serif;
+    transition: background-color 0.3s;
+}
+
+.close:hover {
+    background-color: #3a664f;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .gallery-content {
+        flex-direction: column;
+        height: 90%; /* Use full height for better distribution */
+    }
+
+    .gallery-image {
+        flex: none;
+        height: 50%; /* Explicit 50% height */
+    }
+
+    .gallery-image img {
+        max-height: 100%; /* Ensure image fits within 50% height */
+    }
+
+    .gallery-info {
+        flex: none;
+        height: 50%; /* Remaining 50% for text */
+        /* padding: 1rem 1rem 3rem 1rem; */
+        overflow-y: auto; /* Ensure scrolling */
+    }
+
+    .gallery-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .gallery-info .cta {
+        padding: 0.3rem 0.6rem;
+        font-size: 1.1rem;
+    }
+
+    .nav-button {
+        padding: 0.4rem;
+        font-size: 1.2rem;
+    }
+
+    .close {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .gallery-thumbs img {
+        max-width: 100%;
+        width: 100%;
+        padding: 5px; /* Add padding to prevent clipping */
+    }
+
+    .gallery-thumbs img:hover {
+        transform: scale(1.03); /* Reduce scale on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-info .cta {
+        font-size: 1.1rem;
+        bottom: 0px;
+        padding-bottom: -1rem;
+    }
+
+    .nav-button {
+        font-size: 1rem;
+    }
+}

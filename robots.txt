@@ -1,0 +1,9 @@
+# robots.txt for gilroygarden.ecosys.eu
+# This file controls which parts of the site search engine crawlers can access
+
+# Allow all crawlers to access everything by default
+User-agent: *
+Allow: /
+
+# Specify the location of the sitemap
+Sitemap: https://gilroygarden.ecosys.eu/sitemap.xml

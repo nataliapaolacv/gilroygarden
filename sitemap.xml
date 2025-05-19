@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://gilroygarden.ecosys.eu/index.html</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Thank you page -->
+  <url>
+    <loc>https://gilroygarden.ecosys.eu/thanks.html</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Test page (included but marked as potentially unnecessary; remove if not needed) -->
+  <url>
+    <loc>https://gilroygarden.ecosys.eu/test.html</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- Projects page (not currently updated; adjust changefreq/priority if updated later) -->
+  <url>
+    <loc>https://gilroygarden.ecosys.eu/projects.html</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- Quote page -->
+  <url>
+    <loc>https://gilroygarden.ecosys.eu/quote.html</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Contact page -->
+  <url>
+    <loc>https://gilroygarden.ecosys.eu/contact.html</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>
